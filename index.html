@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>ЧВК «Вектор»</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://forms.yandex.ru/_static/embed.js"></script>
+</head>
+<body>
+
+  <!-- Дисклеймер -->
+  <div id="disclaimer-overlay">
+    <div class="disclaimer-box">
+      <div class="disclaimer-emblem">⚠</div>
+      <h2>ДИСКЛЕЙМЕР</h2>
+      <p>
+        Данный веб-сайт является исключительно игровой платформой и относится к проекту Amazing Online (SAMP RP).
+        Все персонажи, события и совпадения вымышлены и случайны. Мы не претендуем на права Amazing Online.
+        Использование сайта означает, что вы осознаёте: вся информация размещена в рамках игрового процесса.
+      </p>
+      <button id="accept-disclaimer">Принимаю</button>
+    </div>
+  </div>
+
+  <!-- Шапка -->
+  <header>
+  <div class="header-container">
+    <div class="logo">
+      <span class="logo-icon">☠</span>
+      <span class="logo-text">ЧВК «ВЕКТОР»</span>
+      <span class="logo-sub">НВО</span>
+    </div>
+    
+    <!-- Кнопка бургер-меню (видна только на мобильных) -->
+    <button class="burger-menu" id="burger-menu" aria-label="Меню">☰</button>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#" data-page="home">Главная</a>
+      <a href="#" data-page="structure">Структура</a>
+      <a href="#" data-page="orders">Приказы</a>
+      <a href="#" data-page="contact">Связь</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="theme-toggle" title="Переключить тему">☀ Светлая тема</button>
+      <div class="auth-btns">
+        <button id="open-login" class="btn-outline">Личный кабинет</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <main id="main-content">
+    <!-- Контент будет подгружаться через JS -->
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2026 ЧВК «Вектор» — Нижегородский военный округ. Для связи: через вкладку «Связь».</p>
+      <p>Все материалы носят игровой характер.</p>
+    </div>
+  </footer>
+
+  <!-- Модальные окна -->
+  <div id="auth-modal" class="modal hidden">
+    <div class="modal-box">
+      <span class="close-modal">&times;</span>
+      <div id="auth-login-form">
+        <h2>Вход в личный кабинет</h2>
+        <input type="text" id="login-username" placeholder="Логин">
+        <input type="password" id="login-password" placeholder="Пароль">
+        <button id="login-btn" class="btn-solid">Войти</button>
+        <p class="switch-link">Нет аккаунта? <a href="#" id="switch-to-register">Зарегистрироваться</a></p>
+      </div>
+      <div id="auth-register-form" class="hidden">
+        <h2>Регистрация</h2>
+        <input type="text" id="reg-username" placeholder="Придумайте логин">
+        <input type="password" id="reg-password" placeholder="Придумайте пароль">
+        <input type="text" id="reg-callsign" placeholder="Позывной (опционально)">
+        <button id="register-btn" class="btn-solid">Зарегистрироваться</button>
+        <p class="switch-link">Уже есть аккаунт? <a href="#" id="switch-to-login">Войти</a></p>
+      </div>
+      <div id="auth-profile" class="hidden">
+        <h2>Личный кабинет</h2>
+        <p><strong>Логин:</strong> <span id="profile-login"></span></p>
+        <p><strong>Позывной:</strong> <span id="profile-callsign"></span></p>
+        <button id="logout-btn" class="btn-outline">Выйти</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
