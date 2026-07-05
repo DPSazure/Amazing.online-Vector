@@ -143,6 +143,19 @@ nav a:hover, nav a.active { color: var(--accent); border-bottom-color: var(--acc
 }
 #theme-toggle:hover { background: var(--btn-bg); transform: scale(1.05); }
 
+/* Бургер-меню */
+.burger-menu {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  transition: color 0.2s;
+}
+.burger-menu:hover { color: var(--accent); }
+
 /* Основной контент */
 main { flex: 1; max-width: 1200px; width: 100%; margin: 2rem auto; padding: 0 1.5rem; }
 
@@ -251,31 +264,11 @@ footer { background: var(--bg-panel); border-top: 1px solid var(--border); text-
   100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
 }
 
-/* ========== Адаптивность для мобильных ========== */
+/* Адаптивность */
 @media (max-width: 768px) {
-  .header-container {
-    flex-wrap: wrap;
-    padding: 0.5rem 1rem;
-  }
-  .logo { gap: 0.3rem; }
+  .header-container { flex-wrap: wrap; padding: 0.5rem 1rem; }
   .logo-text { font-size: 1rem; }
-  .logo-icon { font-size: 1.5rem; }
-
-  /* Бургер-иконка */
-  .burger-menu {
-    display: block;
-    order: 3;
-    background: transparent;
-    border: none;
-    color: var(--text);
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 0 0.5rem;
-    transition: color 0.2s;
-  }
-  .burger-menu:hover { color: var(--accent); }
-
-  /* Навигация скрыта по умолчанию */
+  .burger-menu { display: block; order: 3; }
   .main-nav {
     display: none;
     width: 100%;
@@ -284,79 +277,24 @@ footer { background: var(--bg-panel); border-top: 1px solid var(--border); text-
     margin: 0.5rem 0;
     order: 4;
   }
-  .main-nav.open {
-    display: flex;
-  }
-  .main-nav a {
-    padding: 0.8rem;
-    border-bottom: 1px solid var(--border);
-    font-size: 1rem;
-  }
-
-  /* Перемещаем кнопку темы и ЛК в шапку */
-  .header-actions {
-    order: 2;
-    margin-left: auto;
-    gap: 0.3rem;
-  }
-  #theme-toggle {
-    padding: 0.4rem 0.6rem;
-    font-size: 0.8rem;
-  }
-  .auth-btns button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-  }
-
-  /* Основной контент */
-  main {
-    padding: 0 1rem;
-    margin: 1rem auto;
-  }
+  .main-nav.open { display: flex; }
+  .main-nav a { padding: 0.8rem; border-bottom: 1px solid var(--border); font-size: 1rem; }
+  .header-actions { order: 2; margin-left: auto; gap: 0.3rem; }
+  #theme-toggle { padding: 0.4rem 0.6rem; font-size: 0.8rem; }
+  .auth-btns button { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+  main { padding: 0 1rem; margin: 1rem auto; }
   .hero h1 { font-size: 1.8rem; }
   .section-title { font-size: 1.4rem; }
-
-  /* Карточки */
-  .grid-units {
-    grid-template-columns: 1fr;
-  }
-  .unit-card {
-    padding: 1rem;
-  }
+  .grid-units { grid-template-columns: 1fr; }
+  .unit-card { padding: 1rem; }
   .unit-card h3 { font-size: 1rem; }
-
-  /* Приказы */
-  .order-header {
-    font-size: 1rem;
-    padding: 1rem;
-  }
-  .order-content {
-    padding: 0 1rem 1rem 1rem;
-  }
-  .order-content p,
-  .order-content li { font-size: 0.9rem; }
-
-  /* Модальное окно */
-  .modal-box {
-    width: 90%;
-    max-width: 350px;
-    padding: 1.5rem;
-  }
-  .modal-box input {
-    padding: 0.6rem;
-    font-size: 0.9rem;
-  }
-
-  /* Форма связи */
-  .contact-wrapper iframe {
-    width: 100%;
-    height: 400px;
-  }
+  .order-header { font-size: 1rem; padding: 1rem; }
+  .order-content { padding: 0 1rem 1rem 1rem; }
+  .order-content p, .order-content li { font-size: 0.9rem; }
+  .modal-box { width: 90%; max-width: 350px; padding: 1.5rem; }
+  .modal-box input { padding: 0.6rem; font-size: 0.9rem; }
+  .contact-wrapper iframe { width: 100%; height: 400px; }
 }
-
-/* Скрываем бургер на больших экранах */
 @media (min-width: 769px) {
-  .burger-menu {
-    display: none;
-  }
+  .burger-menu { display: none; }
 }
